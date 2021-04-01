@@ -1,4 +1,4 @@
-# $title*
+# Europe's Top 5 leagues compared
 
 Student 1: Inniger, Marco
 Student 2: Sedelmeier, Jan
