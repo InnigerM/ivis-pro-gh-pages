@@ -25,6 +25,7 @@ Visualization of Europe's best leagues during the last century. Comparing severa
 
 ### Status
 |Version|Status|
+|----|----|
 |0.0.1|Analysis|
 |First prototype ready | no |
 |Final version ready  | no |
