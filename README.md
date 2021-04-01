@@ -4,8 +4,7 @@ Student 1: Inniger, Marco
 
 Student 2: Sedelmeier, Jan
 
-**Short description:**
-
+## Project information
 Visualization of Europe's best leagues during the last century. Comparing several factors such as: 
 - points in national league
 - points per match
