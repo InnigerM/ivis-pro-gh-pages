@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Club } from './models/club-data';
 import { CsvReaderService } from './services/csv-reader.service';
 
 @Component({
@@ -9,18 +10,9 @@ import { CsvReaderService } from './services/csv-reader.service';
 export class AppComponent implements OnInit {
   title = 'ivisPro';
 
-  constructor(private csv: CsvReaderService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  loadFile(file: string): void {
-    this.csv.loadFile(file).then(res => {
-      console.log(res);
-      console.log(res[1]);
-    }).catch(err => {
-      console.log(err);
-    });
   }
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -9,14 +10,14 @@ export class CsvReaderService {
 
   constructor(private http: HttpClient) { }
 
-  public loadFile(file: string): Promise<string[]> {
-    return new Promise(resolve => {
-      this.http.get(file, { responseType: 'text' })
-        .subscribe(res => {
+  public loadFile(file: string): Observable<string[]> {
+      return this.http.get(file, { responseType: 'text' })
+        .pipe(
+          map(res => {
           const regex = /"/g;
           const result = res.replace(regex, '').split('\n');
-          resolve(result);
-        });
-    });
+          return result;
+        })
+    );
   }
 }
