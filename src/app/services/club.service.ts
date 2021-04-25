@@ -69,7 +69,7 @@ export class ClubService {
             if (match.division === 1) {
               ties.push(match);
               if (allClubs.filter(club => club.name == match.winner.name && club.year === match.season).length === 0) {
-                const winner = { name: match.winner.name, country: match.winner.country, year: match.season, wins: 0, draws: 0 };
+                const winner = { name: match.winner.name, country: match.winner.country, year: match.season, wins: 0, draws: 0, points: 0 };
                 allClubs.push(winner);
               }
             }
@@ -78,15 +78,16 @@ export class ClubService {
           for (let tie of ties) {
             allClubs.map(club => {
               if (tie.isDraw && tie.season === club.year && (club.name === tie.visitor.name || club.name === tie.home.name)) {
+                club.points = club.points + 1;
                 club.draws = club.draws + 1;
               }
               if (club.name === tie.winner.name && club.year === tie.season && !tie.isDraw) {
+                club.points = club.points + 3;
                 club.wins = club.wins + 1;
               }
             });
           }
-          allClubs.sort((a, b) => b.draws - a.draws);
-          allClubs.sort((a, b) => b.wins - a.wins);
+          allClubs.sort((a, b) => b.points - a.points);
           return allClubs;
         })
       );
