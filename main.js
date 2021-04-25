@@ -654,23 +654,21 @@ LeagueWinnersComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵd
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app-routing.module */ "vY5A");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "Sy1n");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "R1ws");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
-/* harmony import */ var _components_status_bar_status_bar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/status-bar/status-bar.component */ "AK/9");
-/* harmony import */ var _components_international_international_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/international/international.component */ "NX/W");
-/* harmony import */ var _components_international_cl_winners_cl_winners_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/international/cl-winners/cl-winners.component */ "QbdO");
-/* harmony import */ var _components_domestic_domestic_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/domestic/domestic.component */ "8wCr");
-/* harmony import */ var _components_domestic_league_winners_league_winners_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/domestic/league-winners/league-winners.component */ "Z0FJ");
-/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
-/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/progress-bar */ "bv9b");
-/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/stepper */ "xHqg");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component */ "Sy1n");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "R1ws");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _components_status_bar_status_bar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/status-bar/status-bar.component */ "AK/9");
+/* harmony import */ var _components_international_international_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/international/international.component */ "NX/W");
+/* harmony import */ var _components_international_cl_winners_cl_winners_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/international/cl-winners/cl-winners.component */ "QbdO");
+/* harmony import */ var _components_domestic_domestic_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/domestic/domestic.component */ "8wCr");
+/* harmony import */ var _components_domestic_league_winners_league_winners_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/domestic/league-winners/league-winners.component */ "Z0FJ");
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/table */ "+0xr");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/progress-bar */ "bv9b");
+/* harmony import */ var _angular_material_stepper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/stepper */ "xHqg");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/icon */ "NFeN");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/core */ "fXoL");
 
 
 
@@ -690,36 +688,34 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineInjector"]({ providers: [], imports: [[
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"]] });
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵdefineInjector"]({ providers: [], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            _angular_material_table__WEBPACK_IMPORTED_MODULE_11__["MatTableModule"],
-            _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_12__["MatProgressBarModule"],
-            _angular_material_stepper__WEBPACK_IMPORTED_MODULE_13__["MatStepperModule"],
-            _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+            _angular_material_table__WEBPACK_IMPORTED_MODULE_10__["MatTableModule"],
+            _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__["MatProgressBarModule"],
+            _angular_material_stepper__WEBPACK_IMPORTED_MODULE_12__["MatStepperModule"],
+            _angular_material_button__WEBPACK_IMPORTED_MODULE_13__["MatButtonModule"],
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-        _components_international_cl_winners_cl_winners_component__WEBPACK_IMPORTED_MODULE_8__["ClWinnersComponent"],
-        _components_international_international_component__WEBPACK_IMPORTED_MODULE_7__["InternationalComponent"],
-        _components_domestic_domestic_component__WEBPACK_IMPORTED_MODULE_9__["DomesticComponent"],
-        _components_domestic_league_winners_league_winners_component__WEBPACK_IMPORTED_MODULE_10__["LeagueWinnersComponent"],
-        _components_status_bar_status_bar_component__WEBPACK_IMPORTED_MODULE_6__["StatusBarComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_1__["AppRoutingModule"],
-        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-        _angular_material_table__WEBPACK_IMPORTED_MODULE_11__["MatTableModule"],
-        _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_12__["MatProgressBarModule"],
-        _angular_material_stepper__WEBPACK_IMPORTED_MODULE_13__["MatStepperModule"],
-        _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButtonModule"],
-        _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"]] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"],
+        _components_international_cl_winners_cl_winners_component__WEBPACK_IMPORTED_MODULE_7__["ClWinnersComponent"],
+        _components_international_international_component__WEBPACK_IMPORTED_MODULE_6__["InternationalComponent"],
+        _components_domestic_domestic_component__WEBPACK_IMPORTED_MODULE_8__["DomesticComponent"],
+        _components_domestic_league_winners_league_winners_component__WEBPACK_IMPORTED_MODULE_9__["LeagueWinnersComponent"],
+        _components_status_bar_status_bar_component__WEBPACK_IMPORTED_MODULE_5__["StatusBarComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
+        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+        _angular_material_table__WEBPACK_IMPORTED_MODULE_10__["MatTableModule"],
+        _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__["MatProgressBarModule"],
+        _angular_material_stepper__WEBPACK_IMPORTED_MODULE_12__["MatStepperModule"],
+        _angular_material_button__WEBPACK_IMPORTED_MODULE_13__["MatButtonModule"],
+        _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"]] }); })();
 
 
 /***/ }),
@@ -926,40 +922,6 @@ class EnglandMatch {
         }
     }
 }
-
-
-/***/ }),
-
-/***/ "vY5A":
-/*!***************************************!*\
-  !*** ./src/app/app-routing.module.ts ***!
-  \***************************************/
-/*! exports provided: AppRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "tyNb");
-/* harmony import */ var _components_domestic_domestic_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/domestic/domestic.component */ "8wCr");
-/* harmony import */ var _components_international_international_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/international/international.component */ "NX/W");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
-
-
-
-
-
-const routes = [
-    { path: 'international', component: _components_international_international_component__WEBPACK_IMPORTED_MODULE_2__["InternationalComponent"] },
-    { path: 'domestic', component: _components_domestic_domestic_component__WEBPACK_IMPORTED_MODULE_1__["DomesticComponent"] },
-    { path: '**', component: _components_international_international_component__WEBPACK_IMPORTED_MODULE_2__["InternationalComponent"] },
-];
-class AppRoutingModule {
-}
-AppRoutingModule.ɵfac = function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); };
-AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
-AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"]] }); })();
 
 
 /***/ }),
