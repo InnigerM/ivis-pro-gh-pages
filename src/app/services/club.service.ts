@@ -3,7 +3,7 @@ import { Club } from '../models/club-data';
 import { CsvReaderService } from './csv-reader.service';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { ClMatch, EnglandMatch, GermanyMatch, ItalyMatch, SpainMatch } from '../models/match';
+import { ClMatch, EnglandMatch } from '../models/match';
 
 @Injectable({
   providedIn: 'root'
@@ -65,16 +65,7 @@ export class ClubService {
           let allClubs: Club[] = [];
           let ties: EnglandMatch[] = [];
           for (let tie of res) {
-            let match;
-            if (league === 'england') {
-              match = new EnglandMatch(tie);
-            } else if (league === 'germany') {
-              match = new GermanyMatch(tie);
-            } else if (league === 'italy') {
-              match = new ItalyMatch(tie);
-            } else if (league === 'spain') {
-              match = new SpainMatch(tie);
-            }
+            const match = new EnglandMatch(tie, league);
             if (match.division === 1) {
               ties.push(match);
               if (allClubs.filter(club => club.name == match.winner.name && club.year === match.season).length === 0) {

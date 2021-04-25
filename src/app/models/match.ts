@@ -32,8 +32,20 @@ export class EnglandMatch {
   winner: Club;
   isDraw: boolean;
 
-  constructor(matchData: string) {
+  constructor(matchData: string, league: string) {
     const tie = matchData.split(',');
+    if (league === 'england') {
+      this.constructEngland(tie);
+    } else if (league === 'germany') {
+      this.constructGermany(tie);
+    } else if (league === 'italy') {
+      this.constructItaly(tie);
+    } else if (league === 'spain') {
+      this.constructSpain(tie);
+    }
+  }
+
+  private constructEngland(tie: string[]) {
     this.date = new Date(tie[0]);
     this.season = Number(tie[1]);
     this.division = Number(tie[7]);
@@ -48,21 +60,8 @@ export class EnglandMatch {
       this.isDraw = false;
     }
   }
-}
 
-export class GermanyMatch {
-  date: Date;
-  season: number;
-  division: number;
-  home: Club;
-  visitor: Club;
-  homeGoal: number;
-  visitorGoal: number;
-  winner: Club;
-  isDraw: boolean;
-
-  constructor(matchData: string) {
-    const tie = matchData.split(',');
+  private constructGermany(tie: string[]) {
     this.date = new Date(tie[0]);
     this.season = Number(tie[1]);
     this.division = Number(tie[8]);
@@ -77,21 +76,8 @@ export class GermanyMatch {
       this.isDraw = false;
     }
   }
-}
 
-export class ItalyMatch {
-  date: Date;
-  season: number;
-  division: number;
-  home: Club;
-  visitor: Club;
-  homeGoal: number;
-  visitorGoal: number;
-  winner: Club;
-  isDraw: boolean;
-
-  constructor(matchData: string) {
-    const tie = matchData.split(',');
+  private constructItaly(tie: string[]) {
     this.date = new Date(tie[0]);
     this.season = Number(tie[1]);
     this.division = Number(tie[7]);
@@ -106,21 +92,8 @@ export class ItalyMatch {
       this.isDraw = false;
     }
   }
-}
 
-export class SpainMatch {
-  date: Date;
-  season: number;
-  division: number;
-  home: Club;
-  visitor: Club;
-  homeGoal: number;
-  visitorGoal: number;
-  winner: Club;
-  isDraw: boolean;
-
-  constructor(matchData: string) {
-    const tie = matchData.split(',');
+  private constructSpain(tie: string[]) {
     this.date = new Date(tie[0]);
     this.season = Number(tie[1]);
     this.division = Number(tie[8]);

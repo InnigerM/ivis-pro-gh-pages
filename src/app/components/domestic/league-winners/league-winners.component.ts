@@ -9,6 +9,7 @@ import { ClubService } from 'src/app/services/club.service';
 })
 export class LeagueWinnersComponent implements OnInit {
   @Input() dataSet: Club[];
+  @Input() isLoading: boolean;
   @Input() league: string;
 
   public displayedColumns: string[] = ['name', 'country', 'wins', 'draws', 'points'];

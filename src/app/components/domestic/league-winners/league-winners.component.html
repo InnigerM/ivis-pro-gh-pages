@@ -1,6 +1,7 @@
 <div>
   <h3>{{league}}</h3>
   <div>
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
     <table mat-table [dataSource]="dataSet" class="mat-elevation-z8">
 
       <ng-container matColumnDef="name">

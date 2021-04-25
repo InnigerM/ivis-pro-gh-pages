@@ -6,18 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ClubComponent } from './components/club/club.component';
-import { ClWinnersComponent } from './components/international/cl-winners/cl-winners.component';
-
-import { MatTableModule } from '@angular/material/table';
 import { InternationalComponent } from './components/international/international.component';
+import { ClWinnersComponent } from './components/international/cl-winners/cl-winners.component';
 import { DomesticComponent } from './components/domestic/domestic.component';
 import { LeagueWinnersComponent } from './components/domestic/league-winners/league-winners.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClubComponent,
     ClWinnersComponent,
     InternationalComponent,
     DomesticComponent,
@@ -29,6 +28,7 @@ import { LeagueWinnersComponent } from './components/domestic/league-winners/lea
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
