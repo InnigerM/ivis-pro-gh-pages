@@ -31,16 +31,10 @@ export class ClWinnersComponent implements OnInit {
       this.countWinnersByCountry();
       this.createCountrySvg();
       this.drawCountryBars(this.winsByCountry);
-      console.log(this.clWinners);
 
       this.countWinnersByClub();
       this.createClubSvg();
       this.drawClubBars(this.winsByClub);
-
-      this.clubSvc.loadLeagueWinners('england').subscribe(clubs => {
-        console.log(clubs);
-        console.log(clubs.filter(club => club.year === 2000))
-      });
     });
   }
 

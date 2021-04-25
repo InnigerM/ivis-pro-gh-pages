@@ -11,13 +11,17 @@ import { ClWinnersComponent } from './components/international/cl-winners/cl-win
 
 import { MatTableModule } from '@angular/material/table';
 import { InternationalComponent } from './components/international/international.component';
+import { DomesticComponent } from './components/domestic/domestic.component';
+import { LeagueWinnersComponent } from './components/domestic/league-winners/league-winners.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClubComponent,
     ClWinnersComponent,
-    InternationalComponent
+    InternationalComponent,
+    DomesticComponent,
+    LeagueWinnersComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ export class ClMatch {
   }
 }
 
-export class LeagueMatch {
+export class EnglandMatch {
   date: Date;
   season: number;
   division: number;
@@ -32,17 +32,104 @@ export class LeagueMatch {
   winner: Club;
   isDraw: boolean;
 
-  constructor(matchData: string, league: string) {
+  constructor(matchData: string) {
     const tie = matchData.split(',');
     this.date = new Date(tie[0]);
     this.season = Number(tie[1]);
     this.division = Number(tie[7]);
-    this.home = { name: tie[2], country: league };
-    this.visitor = { name: tie[3], country: league };
+    this.home = { name: tie[2], country: 'England' };
+    this.visitor = { name: tie[3], country: 'England' };
     this.homeGoal = Number(tie[5]);
     this.visitorGoal = Number(tie[6]);
     this.winner = tie[11] === 'A' ? this.visitor : this.home;
     if (tie[11] === 'D') {
+      this.isDraw = true;
+    } else {
+      this.isDraw = false;
+    }
+  }
+}
+
+export class GermanyMatch {
+  date: Date;
+  season: number;
+  division: number;
+  home: Club;
+  visitor: Club;
+  homeGoal: number;
+  visitorGoal: number;
+  winner: Club;
+  isDraw: boolean;
+
+  constructor(matchData: string) {
+    const tie = matchData.split(',');
+    this.date = new Date(tie[0]);
+    this.season = Number(tie[1]);
+    this.division = Number(tie[8]);
+    this.home = { name: tie[2], country: 'Germany' };
+    this.visitor = { name: tie[3], country: 'Germany' };
+    this.homeGoal = Number(tie[5]);
+    this.visitorGoal = Number(tie[6]);
+    this.winner = this.homeGoal > this.visitorGoal ? this.home : this.visitor;
+    if (this.homeGoal === this.visitorGoal) {
+      this.isDraw = true;
+    } else {
+      this.isDraw = false;
+    }
+  }
+}
+
+export class ItalyMatch {
+  date: Date;
+  season: number;
+  division: number;
+  home: Club;
+  visitor: Club;
+  homeGoal: number;
+  visitorGoal: number;
+  winner: Club;
+  isDraw: boolean;
+
+  constructor(matchData: string) {
+    const tie = matchData.split(',');
+    this.date = new Date(tie[0]);
+    this.season = Number(tie[1]);
+    this.division = Number(tie[7]);
+    this.home = { name: tie[2], country: 'Italy' };
+    this.visitor = { name: tie[3], country: 'Italy' };
+    this.homeGoal = Number(tie[5]);
+    this.visitorGoal = Number(tie[6]);
+    this.winner = this.homeGoal > this.visitorGoal ? this.home : this.visitor;
+    if (this.homeGoal === this.visitorGoal) {
+      this.isDraw = true;
+    } else {
+      this.isDraw = false;
+    }
+  }
+}
+
+export class SpainMatch {
+  date: Date;
+  season: number;
+  division: number;
+  home: Club;
+  visitor: Club;
+  homeGoal: number;
+  visitorGoal: number;
+  winner: Club;
+  isDraw: boolean;
+
+  constructor(matchData: string) {
+    const tie = matchData.split(',');
+    this.date = new Date(tie[0]);
+    this.season = Number(tie[1]);
+    this.division = Number(tie[8]);
+    this.home = { name: tie[2], country: 'Italy' };
+    this.visitor = { name: tie[3], country: 'Italy' };
+    this.homeGoal = Number(tie[6]);
+    this.visitorGoal = Number(tie[7]);
+    this.winner = this.homeGoal > this.visitorGoal ? this.home : this.visitor;
+    if (this.homeGoal === this.visitorGoal) {
       this.isDraw = true;
     } else {
       this.isDraw = false;
