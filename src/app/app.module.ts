@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+import { StatusBarComponent } from './components/status-bar/status-bar.component';
 
 import { InternationalComponent } from './components/international/international.component';
 import { ClWinnersComponent } from './components/international/cl-winners/cl-winners.component';
@@ -13,6 +15,8 @@ import { LeagueWinnersComponent } from './components/domestic/league-winners/lea
 
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -20,15 +24,20 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ClWinnersComponent,
     InternationalComponent,
     DomesticComponent,
-    LeagueWinnersComponent
+    LeagueWinnersComponent,
+    StatusBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
     MatProgressBarModule,
+    MatStepperModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
