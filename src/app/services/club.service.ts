@@ -3,7 +3,7 @@ import { Club } from '../models/club-data';
 import { CsvReaderService } from './csv-reader.service';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Match } from '../models/match';
+import { ClMatch, LeagueMatch } from '../models/match';
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +33,9 @@ export class ClubService {
       .pipe(
         map(res => {
           res.splice(0, 1);
-          let ties: Match[] = [];
+          let ties: ClMatch[] = [];
           for (let tie of res) {
-            ties.push(new Match(tie));
+            ties.push(new ClMatch(tie));
           }
 
           ties = ties.filter(tie => {
@@ -53,6 +53,41 @@ export class ClubService {
             clWinners.push(club);
           }
           return clWinners;
+        })
+      );
+  }
+
+  public loadLeagueWinners(league: string): Observable<Club[]> {
+    return this.csv.loadFile(`assets/league-data/${league}.csv`)
+      .pipe(
+        map(res => {
+          res.splice(0, 1);
+          let allClubs: Club[] = [];
+          let ties: LeagueMatch[] = [];
+          for (let tie of res) {
+            const match = new LeagueMatch(tie, league);
+            if (match.division === 1) {
+              ties.push(match);
+              if (allClubs.filter(club => club.name == match.winner.name && club.year === match.season).length === 0) {
+                const winner = { name: match.winner.name, country: match.winner.country, year: match.season, wins: 0, draws: 0 };
+                allClubs.push(winner);
+              }
+            }
+          }
+
+          for (let tie of ties) {
+            allClubs.map(club => {
+              if (tie.isDraw && tie.season === club.year && (club.name === tie.visitor.name || club.name === tie.home.name)) {
+                club.draws = club.draws + 1;
+              }
+              if (club.name === tie.winner.name && club.year === tie.season && !tie.isDraw) {
+                club.wins = club.wins + 1;
+              }
+            });
+          }
+          allClubs.sort((a, b) => b.draws - a.draws);
+          allClubs.sort((a, b) => b.wins - a.wins);
+          return allClubs;
         })
       );
   }

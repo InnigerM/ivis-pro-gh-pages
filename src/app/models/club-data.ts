@@ -4,6 +4,7 @@ export interface Club {
   location?: Location,
   year?: number,
   wins?: number,
+  draws?: number,
 }
 
 export interface Location {
