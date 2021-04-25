@@ -1,5 +1,5 @@
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup" label="International Comparison">
+  <mat-step [stepControl]="firstFormGroup" label="International Comparison" state="phone">
     <form [formGroup]="firstFormGroup">
       <div>
         <app-international></app-international>
@@ -16,12 +16,24 @@
       </div>
     </form>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+  <mat-step state="phone">
+    <ng-template matStepLabel>Remarkable Domestic Seasons</ng-template>
+    <p>Special domestic seasons (e.g. Arsenal's invincibles)</p>
+    <div>
+      <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
+      <button mat-stroked-button color="primary" matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step state="phone">
+    <ng-template matStepLabel>Conclusion</ng-template>
+    <p>Show final results</p>
     <div>
       <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
       <button mat-stroked-button color="primary" (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
+
+  <ng-template matStepperIcon="phone">
+    <mat-icon>call_end</mat-icon>
+  </ng-template>
 </mat-horizontal-stepper>
