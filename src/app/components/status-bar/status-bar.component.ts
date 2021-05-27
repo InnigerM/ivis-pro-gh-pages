@@ -8,16 +8,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class StatusBarComponent implements OnInit {
   isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  emptyFormGroup: FormGroup;
+  leagueSelectionForm: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.firstFormGroup = this._formBuilder.group({
+    this.emptyFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
-    this.secondFormGroup = this._formBuilder.group({
+    this.leagueSelectionForm = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
   }

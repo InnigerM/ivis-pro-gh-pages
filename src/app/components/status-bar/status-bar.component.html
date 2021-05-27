@@ -1,14 +1,14 @@
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup" label="International Comparison" state="phone">
-    <form [formGroup]="firstFormGroup">
+  <mat-step [stepControl]="emptyFormGroup" label="International Comparison" state="phone">
+    <form [formGroup]="emptyFormGroup">
       <div>
         <app-international></app-international>
         <button mat-stroked-button color="primary" matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Domestic Results">
-    <form [formGroup]="secondFormGroup">
+  <mat-step [stepControl]="leagueSelectionForm" label="Domestic Results">
+    <form [formGroup]="leagueSelectionForm">
       <div>
         <app-domestic></app-domestic>
         <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
@@ -16,21 +16,24 @@
       </div>
     </form>
   </mat-step>
-  <mat-step state="phone">
-    <ng-template matStepLabel>Remarkable Domestic Seasons</ng-template>
-    <p>Special domestic seasons (e.g. Arsenal's invincibles)</p>
-    <div>
-      <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
-      <button mat-stroked-button color="primary" matStepperNext>Next</button>
-    </div>
+  <mat-step [stepControl]="emptyFormGroup">
+    <form [formGroup]="emptyFormGroup">
+      <ng-template matStepLabel>Remarkable Domestic Seasons</ng-template>
+      <p>Special domestic seasons (e.g. Arsenal's invincibles)</p>
+      <div>
+        <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
+        <button mat-stroked-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
   </mat-step>
-  <mat-step state="phone">
-    <ng-template matStepLabel>Conclusion</ng-template>
-    <p>Show final results</p>
-    <div>
-      <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
-      <button mat-stroked-button color="primary" (click)="stepper.reset()">Reset</button>
-    </div>
+  <mat-step [stepControl]="emptyFormGroup" label="Conclusion">
+    <form [formGroup]="emptyFormGroup">
+      <p>Show final results</p>
+      <div>
+        <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
+        <button mat-stroked-button color="primary" (click)="stepper.reset()">Reset</button>
+      </div>
+    </form>
   </mat-step>
 
   <ng-template matStepperIcon="phone">
