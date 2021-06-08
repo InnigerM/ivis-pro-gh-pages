@@ -1,4 +1,8 @@
 <h2 class="mat-title">Champions League Wins By Country</h2>
+<p>As you can see here, the countries with the most wins form somewhat the “best” leagues in Europe. Interestingly the
+  Netherlands, Scotland, Romania and Serbia are inside the top leagues overall. But as history tells, those wins were
+  achieved due to the circumstance that the champions league changed reforms over time and the financial impact of big
+  teams from England or Spain did not exist as much as it does now.</p>
 <div class="flex flex-row items-center" *ngFor="let country of winsByCountry">
   <h2 class="w-36">{{ country.country }}: {{ country.count }}</h2>
   <div class="flex-initial" *ngFor="let i of [].constructor(country.count)">
