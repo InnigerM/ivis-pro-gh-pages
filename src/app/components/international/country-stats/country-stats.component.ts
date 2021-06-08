@@ -8,7 +8,7 @@ import { ClubService } from 'src/app/services/club.service';
   styleUrls: ['./country-stats.component.css']
 })
 export class CountryStatsComponent implements OnInit {
-  public winsByCountry: Country[] = [];
+  private winsByCountry: Country[] = [];
   private clWinners: Club[];
 
   constructor(private clubSvc: ClubService) { }
@@ -16,17 +16,20 @@ export class CountryStatsComponent implements OnInit {
   ngOnInit(): void {
     this.clubSvc.loadChampionsLeagueWinners().subscribe(clubs => {
       this.clWinners = clubs;
-      this.countWinnersByCountry();
+      this.countWinnersByCountry(1957);
     });
   }
 
-  private countWinnersByCountry(): void {
+  public countWinnersByCountry(year: number): Country[] {
+    this.winsByCountry = [];
     const winsByCountry: Map<string, number> = new Map();
     for (let winner of this.clWinners) {
-      if (winsByCountry.has(winner.country)) {
-        winsByCountry.set(winner.country, winsByCountry.get(winner.country) + 1);
-      } else {
-        winsByCountry.set(winner.country, 1);
+      if (winner.year >= year) {
+        if (winsByCountry.has(winner.country)) {
+          winsByCountry.set(winner.country, winsByCountry.get(winner.country) + 1);
+        } else {
+          winsByCountry.set(winner.country, 1);
+        }
       }
     }
 
@@ -36,6 +39,7 @@ export class CountryStatsComponent implements OnInit {
     });
 
     this.winsByCountry.sort((a, b) => b.count - a.count);
+    return this.winsByCountry;
   }
 
   private convertCountry(country: string): string {

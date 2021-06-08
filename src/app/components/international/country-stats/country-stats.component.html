@@ -3,9 +3,80 @@
   Netherlands, Scotland, Romania and Serbia are inside the top leagues overall. But as history tells, those wins were
   achieved due to the circumstance that the champions league changed reforms over time and the financial impact of big
   teams from England or Spain did not exist as much as it does now.</p>
-<div class="flex flex-row items-center" *ngFor="let country of winsByCountry">
+<div class="flex flex-row items-center" *ngFor="let country of countWinnersByCountry(1955)">
   <h2 class="w-36">{{ country.country }}: {{ country.count }}</h2>
   <div class="flex-initial" *ngFor="let i of [].constructor(country.count)">
-    <img class="cl-trophy" src="/assets/img/trophy.svg" alt="CL trophy">
+    <img class="trophy" src="/assets/img/trophy.svg" alt="CL trophy">
+  </div>
+</div>
+
+<h2>Champions League Wins after 1990</h2>
+<div class="flex flex-row items-center" *ngFor="let country of countWinnersByCountry(1990)">
+  <h2 class="w-36">{{ country.country }}: {{ country.count }}</h2>
+  <div class="flex-initial" *ngFor="let i of [].constructor(country.count)">
+    <img class="trophy" src="/assets/img/trophy.svg" alt="CL trophy">
+  </div>
+</div>
+
+<h2>Domestic trophies in top 4 leagues</h2>
+<div class="grid grid-cols-4 gap-4 place-items-center">
+  <div>
+    <h3 class="text-center">Spain</h3>
+    <div class="grid grid-cols-3 gap-2">
+      <div>
+        <img class="trophy" src="/assets/img/la_liga.svg" alt="La Liga trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/copa_del_rey.svg" alt="Copa del Rey trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/spanish_supercup.svg" alt="Spanish Supercup trophy">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3 class="text-center">Italy</h3>
+    <div class="grid grid-cols-3 gap-2">
+      <div>
+        <img class="trophy" src="/assets/img/serie_a.svg" alt="Serie A trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/italian_cup.svg" alt="Italian Cup trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/italian_supercup.svg" alt="Italian Supercup trophy">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3 class="text-center">England</h3>
+    <div class="grid grid-cols-4 gap-2">
+      <div>
+        <img class="trophy" src="/assets/img/premier_league.svg" alt="Premier League trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/fa_cup.svg" alt="FA Cup trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/league_cup.svg" alt="League Cup trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/english_supercup.svg" alt="English Supercup trophy">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3 class="text-center">Germany</h3>
+    <div class="grid grid-cols-3 gap-2">
+      <div>
+        <img class="trophy" src="/assets/img/la_liga.svg" alt="La Liga trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/copa_del_rey.svg" alt="Copa del Rey trophy">
+      </div>
+      <div>
+        <img class="trophy" src="/assets/img/spanish_supercup.svg" alt="Spanish Supercup trophy">
+      </div>
+    </div>
   </div>
 </div>
