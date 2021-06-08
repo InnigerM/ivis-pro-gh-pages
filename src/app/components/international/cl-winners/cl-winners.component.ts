@@ -111,7 +111,7 @@ export class ClWinnersComponent implements OnInit {
       .attr('y', d => y(d.count))
       .attr('width', x.bandwidth)
       .attr('height', (d) => this.height - y(d.count))
-      .attr('fill', '#f59842');
+      .attr('fill', d => this.getCountryColor(d.country));
   }
 
   private createClubSvg(): void {
@@ -153,6 +153,21 @@ export class ClWinnersComponent implements OnInit {
       .attr('y', d => y(d.wins))
       .attr('width', x.bandwidth)
       .attr('height', (d) => this.height - y(d.wins))
-      .attr('fill', '#f59842');
+      .attr('fill', d => this.getCountryColor(d.country));
+  }
+
+  getCountryColor(country: string) {
+    switch (country) {
+      case 'ENG':
+        return '#c75a93';
+      case 'ITA':
+        return '#60a862';
+      case 'GER':
+        return '#b2953e';
+      case 'ESP':
+        return '#cc5d43';
+      default:
+        return '#c8c7d1';
+    }
   }
 }

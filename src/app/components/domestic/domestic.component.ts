@@ -11,9 +11,6 @@ export class DomesticComponent implements OnInit {
   public england: Club[];
   public isLoadingEngland = true;
 
-  public france: Club[];
-  public isLoadingFrance = true;
-
   public germany: Club[];
   public isLoadingGermany = true;
 
@@ -31,10 +28,6 @@ export class DomesticComponent implements OnInit {
       this.england = clubs.filter(club => club.year === 2019);
       this.isLoadingEngland = false;
     });
-
-    // this.clubSvc.loadLeagueWinners('france').subscribe(clubs => {
-      //   this.france = clubs.filter(club => club.year === 2018);
-      // });
 
       this.clubSvc.loadLeagueWinners('germany').subscribe(clubs => {
         this.germany = clubs.filter(club => club.year === 2018);
