@@ -1,0 +1,7 @@
+<h2 class="mat-title">Champions League Wins By Country</h2>
+<div class="flex flex-row items-center" *ngFor="let country of winsByCountry">
+  <h2 class="w-36">{{ country.country }}: {{ country.count }}</h2>
+  <div class="flex-initial" *ngFor="let i of [].constructor(country.count)">
+    <img class="cl-trophy" src="/assets/img/trophy.svg" alt="CL trophy">
+  </div>
+</div>
