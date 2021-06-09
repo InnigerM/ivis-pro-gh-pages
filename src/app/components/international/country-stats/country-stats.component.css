@@ -1,3 +1,11 @@
 .trophy {
   width: 60px;
 }
+
+.domestic-trophy{
+  display: block;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+}

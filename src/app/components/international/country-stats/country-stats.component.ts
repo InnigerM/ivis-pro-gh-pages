@@ -9,7 +9,7 @@ import { ClubService } from 'src/app/services/club.service';
 })
 export class CountryStatsComponent implements OnInit {
   private winsByCountry: Country[] = [];
-  private clWinners: Club[];
+  private clWinners: Club[] = [];
 
   constructor(private clubSvc: ClubService) { }
 
