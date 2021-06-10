@@ -1,7 +1,7 @@
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="emptyFormGroup" label="International Comparison" state="phone">
     <form [formGroup]="emptyFormGroup">
-      <div>
+      <div class="container mx-auto">
         <app-international></app-international>
         <button mat-stroked-button color="primary" matStepperNext>Next</button>
       </div>
@@ -9,7 +9,7 @@
   </mat-step>
   <mat-step [stepControl]="leagueSelectionForm" label="Domestic Results">
     <form [formGroup]="leagueSelectionForm">
-      <div>
+      <div class="container mx-auto">
         <app-domestic></app-domestic>
         <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
         <button mat-stroked-button color="primary" matStepperNext>Next</button>
@@ -19,21 +19,21 @@
   <mat-step [stepControl]="emptyFormGroup">
     <form [formGroup]="emptyFormGroup">
       <ng-template matStepLabel>Remarkable Domestic Seasons</ng-template>
-      <p>Special domestic seasons (e.g. Arsenal's invincibles)</p>
-      <p>ManU undefeated away</p>
-      <p>Rangers undefeated champions</p>
-      <p>Lewandowski 41 BL goals</p>
-      <p>Inagi Williams 1800 days consecutive matches</p>
-      <div>
+      <div class="container mx-auto">
+        <p>Special domestic seasons (e.g. Arsenal's invincibles)</p>
+        <p>ManU undefeated away</p>
+        <p>Rangers undefeated champions</p>
+        <p>Lewandowski 41 BL goals</p>
+        <p>Inagi Williams 1800 days consecutive matches</p>
         <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
         <button mat-stroked-button color="primary" matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step [stepControl]="emptyFormGroup" label="Conclusion">
-    <form [formGroup]="emptyFormGroup">
+    <form class="container mx-auto" [formGroup]="emptyFormGroup">
       <p>Show final results</p>
-      <div>
+      <div class="container mx-auto">
         <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
         <button mat-stroked-button color="primary" (click)="stepper.reset()">Reset</button>
       </div>
