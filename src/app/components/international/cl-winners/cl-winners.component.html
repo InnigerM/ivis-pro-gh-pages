@@ -1,8 +1,12 @@
 <h2 class="mat-title">Champions League Wins By Clubs</h2>
-<p>As it can be seen, clubs with the most wins also represent the graphic above about the countries with the most wins.
+<p class="text-justify">As it can be seen, clubs with the most wins also represent the graphic above about the countries
+  with the most wins.
   Also another interesting point are the clubs which have won the champions league at all. As you can see, teams like
   Nottingham Forest, Aston Villa, Hamburger SV, etc. are teams which would nowadays nowhere be near the champions league
   at all. But as mentioned above, times change and especially Nottingham Forest were a really strong team back in
   1978/79/80 and won back to back titles in the champions league. But unfortunately they now declined from their
   position and play in the championship (second league in England).</p>
+<div class="loading flex place-content-center items-center" *ngIf="isLoading">
+  <div class="lds-dual-ring"></div>
+</div>
 <figure id="club"></figure>

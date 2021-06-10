@@ -10,6 +10,8 @@ import { ClubService } from 'src/app/services/club.service';
 })
 export class ClWinnersComponent implements OnInit {
 
+  public isLoading = true;
+
   private clWinners: Club[];
 
   private winsByCountry: Country[] = [];
@@ -26,6 +28,8 @@ export class ClWinnersComponent implements OnInit {
 
   ngOnInit(): void {
     this.clubSvc.loadChampionsLeagueWinners().subscribe(clubs => {
+      this.isLoading = true;
+
       this.clWinners = clubs;
 
       this.countWinnersByCountry();
@@ -35,6 +39,8 @@ export class ClWinnersComponent implements OnInit {
       this.countWinnersByClub();
       this.createClubSvg();
       this.drawClubBars(this.winsByClub);
+
+      this.isLoading = false;
     });
   }
 

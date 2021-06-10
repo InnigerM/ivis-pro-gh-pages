@@ -11,12 +11,20 @@ export class CountryStatsComponent implements OnInit {
   private winsByCountry: Country[] = [];
   private clWinners: Club[] = [];
 
+  public winnersOfAllTime: Country[] = [];
+  public winnersSince1990: Country[] = [];
+
+  public isLoading = true;
+
   constructor(private clubSvc: ClubService) { }
 
   ngOnInit(): void {
     this.clubSvc.loadChampionsLeagueWinners().subscribe(clubs => {
       this.clWinners = clubs;
-      this.countWinnersByCountry(1957);
+      this.isLoading = true;
+      this.winnersOfAllTime = this.countWinnersByCountry(1955);
+      this.winnersSince1990 = this.countWinnersByCountry(1990);
+      this.isLoading = false;
     });
   }
 
