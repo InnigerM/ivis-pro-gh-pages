@@ -23,7 +23,7 @@ export class CountryStatsComponent implements OnInit {
       this.clWinners = clubs;
       this.isLoading = true;
       this.winnersOfAllTime = this.countWinnersByCountry(1955);
-      this.winnersSince1990 = this.countWinnersByCountry(1990);
+      this.winnersSince1990 = this.countWinnersByCountry(1992);
       this.isLoading = false;
     });
   }

@@ -22,7 +22,7 @@ export class ClWinnersComponent implements OnInit {
 
   private margin = 100;
   private width = 1200 - (this.margin * 2);
-  private height = 600 - (this.margin * 2);
+  private height = 600 - (this.margin);
 
   constructor(private clubSvc: ClubService) { }
 
@@ -32,33 +32,12 @@ export class ClWinnersComponent implements OnInit {
 
       this.clWinners = clubs;
 
-      this.countWinnersByCountry();
-      this.createCountrySvg();
-      this.drawCountryBars(this.winsByCountry);
-
       this.countWinnersByClub();
       this.createClubSvg();
       this.drawClubBars(this.winsByClub);
 
       this.isLoading = false;
     });
-  }
-
-  private countWinnersByCountry(): void {
-    const winsByCountry: Map<string, number> = new Map();
-    for (let winner of this.clWinners) {
-      if (winsByCountry.has(winner.country)) {
-        winsByCountry.set(winner.country, winsByCountry.get(winner.country) + 1);
-      } else {
-        winsByCountry.set(winner.country, 1);
-      }
-    }
-
-    winsByCountry.forEach((count, country) => {
-      this.winsByCountry.push({ country: country, count: count });
-    });
-
-    this.winsByCountry.sort((a, b) => b.count - a.count);
   }
 
   private countWinnersByClub(): void {
@@ -78,55 +57,13 @@ export class ClWinnersComponent implements OnInit {
     this.winsByClub = winsByClub;
   }
 
-  private createCountrySvg(): void {
-    this.countrySvg = d3.select('figure#country')
-      .append('svg')
-      .attr('width', this.width + (this.margin * 2))
-      .attr('height', this.height + (this.margin * 2))
-      .append('g')
-      .attr('transform', 'translate(' + this.margin + ',' + this.margin + ')');
-  }
-
-  private drawCountryBars(data: any[]): void {
-    const x = d3.scaleBand()
-      .range([0, this.width])
-      .domain(data.map(d => d.country))
-      .padding(0.2);
-
-    this.countrySvg.append('g')
-      .attr('transform', 'translate(0,' + this.height + ')')
-      .call(d3.axisBottom(x))
-      .selectAll('text')
-      .attr('transform', 'translate(-10,0)rotate(-45)')
-      .style('font-size', '12px')
-      .style('text-anchor', 'end');
-
-    const y = d3.scaleLinear()
-      .domain([0, 20])
-      .range([this.height, 0]);
-
-    this.countrySvg.append('g')
-      .call(d3.axisLeft(y))
-      .style('font-size', '12px');
-
-    this.countrySvg.selectAll("bars")
-      .data(data)
-      .enter()
-      .append('rect')
-      .attr('x', d => x(d.country))
-      .attr('y', d => y(d.count))
-      .attr('width', x.bandwidth)
-      .attr('height', (d) => this.height - y(d.count))
-      .attr('fill', d => this.getCountryColor(d.country));
-  }
-
   private createClubSvg(): void {
     this.clubSvg = d3.select('figure#club')
       .append('svg')
       .attr('width', this.width + (this.margin * 2))
       .attr('height', this.height + (this.margin * 2))
       .append('g')
-      .attr('transform', 'translate(' + this.margin + ',' + this.margin + ')');
+      .attr('transform', 'translate(' + this.margin + ',' + this.margin / 4 + ')');
   }
 
   private drawClubBars(data: any[]): void {
@@ -140,7 +77,7 @@ export class ClWinnersComponent implements OnInit {
       .call(d3.axisBottom(x))
       .selectAll('text')
       .attr('transform', 'translate(-10,0)rotate(-45)')
-      .style('font-size', '12px')
+      .style('font-size', '16px')
       .style('text-anchor', 'end');
 
     const y = d3.scaleLinear()
@@ -149,7 +86,7 @@ export class ClWinnersComponent implements OnInit {
 
     this.clubSvg.append('g')
       .call(d3.axisLeft(y).ticks(15))
-      .style('font-size', '12px');
+      .style('font-size', '14px');
 
     this.clubSvg.selectAll("bars")
       .data(data)

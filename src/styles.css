@@ -6,3 +6,15 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: white;
 }
+
+h1 {
+  font-size: 30px !important;
+}
+
+h2 {
+  font-size: 22px !important;
+}
+
+p {
+  font-size: medium;
+}

@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CountryStatsComponent } from './components/international/country-stats/country-stats.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { WorkloadComponent } from './components/domestic/workload/workload.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatSelectModule } from '@angular/material/select';
     DomesticComponent,
     LeagueWinnersComponent,
     StatusBarComponent,
-    CountryStatsComponent
+    CountryStatsComponent,
+    WorkloadComponent
   ],
   imports: [
     BrowserModule,

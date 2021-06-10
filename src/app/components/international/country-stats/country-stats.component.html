@@ -1,5 +1,6 @@
 <h2 class="mat-title">Champions League Wins By Country</h2>
-<p>As you can see here, the countries with the most wins form somewhat the “best” leagues in Europe. Interestingly the
+<p class="text-justify">As you can see here, the countries with the most wins form somewhat the “best” leagues in
+  Europe. Interestingly the
   Netherlands, Scotland, Romania and Serbia are inside the top leagues overall. But as history tells, those wins were
   achieved due to the circumstance that the champions league changed reforms over time and the financial impact of big
   teams from England or Spain did not exist as much as it does now.</p>
@@ -15,7 +16,13 @@
     </div>
   </div>
 
-  <h2>Champions League Wins after 1990</h2>
+  <h2>Champions League Wins after 1992</h2>
+  <p class="text-justify">The European Cup (in German Europapokal der Landesmeister) has been renamed to the Champions
+    League as it is called today. With the creation of this league even more clubs could qualify for this tournament and
+    not only the champions of a domestic league. As it stands today, the Champions League begins with qualifying round
+    and builds then 8 groups with 4 teams each. The best 2 teams qualify for the round of the last sixteen. Teams which
+    finished 3rd in their group get qualified for the K.O. stage of the Europa League and the teams which finished
+    bottom get ejected from any European competition for this season.</p>
   <div class="flex flex-row items-center" *ngFor="let country of winnersSince1990">
     <h2 class="w-36">{{ country.country }}: {{ country.count }}</h2>
     <div class="flex-initial" *ngFor="let i of [].constructor(country.count)">

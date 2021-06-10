@@ -5,11 +5,20 @@
   is played in all of the leagues between the cup and league winner. England plays it between the FA Cup winner and the
   league winner.</p>
 <div>
-  <h2>Domestic trophies in top 4 leagues</h2>
-  <div class="grid grid-cols-4 gap-4 place-items-center pb-8">
-    <div>
+  <app-workload></app-workload>
+</div>
+<div>
+  <h2>League Workloads / Domestic Trophies</h2>
+  <p class="text-justify">As you can see with the pictures of the different trophies, many matches have to be played.
+    About the workload in general, the German Bundesliga has the fewest games with 34 matches. All other leagues
+    (Premier League, Serie A, La Liga) have 38 games over a season. But also with the different cup games, the English
+    football teams have to play in max. 6 different competitions (Premier League, FA Cup, EFL Cup, FA Community Shield,
+    Champions / Europa League, UEFA Super Cup) and with that the English teams have the highest workload over all other
+    European football teams.</p>
+  <div class="flex flex-wrap justify-around pb-8">
+    <div class="px-8 pb-8">
       <h3 class="text-center">Spain</h3>
-      <div class="grid grid-cols-3 gap-2 justify-items-center">
+      <div class="grid grid-cols-3 gap-4 justify-items-center">
         <div>
           <img class="domestic-trophy" src="/assets/img/la_liga.svg" alt="La Liga trophy">
           <div class="h-10 text-center">La Liga (League)</div>
@@ -24,37 +33,37 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="px-8 pb-8">
       <h3 class="text-center">Italy</h3>
-      <div class="grid grid-cols-3 gap-2">
+      <div class="grid grid-cols-3 gap-4">
         <div>
           <img class="domestic-trophy" src="/assets/img/serie_a.svg" alt="Serie A trophy">
           <div class="h-10 text-center">Serie-A (League)</div>
         </div>
         <div>
           <img class="domestic-trophy" src="/assets/img/italian_cup.svg" alt="Italian Cup trophy">
-          <div class="h-10 leading-10 text-center">Italian Cup</div>
+          <div class="h-10 text-center">Italian Cup</div>
         </div>
         <div>
           <img class="domestic-trophy" src="/assets/img/italian_supercup.svg" alt="Italian Supercup trophy">
-          <div class="h-10 leading-10 text-center">Italian Supercup</div>
+          <div class="h-10 text-center">Italian Supercup</div>
         </div>
       </div>
     </div>
-    <div>
+    <div class="px-8 pb-8">
       <h3 class="text-center">England</h3>
-      <div class="grid grid-cols-4 gap-2">
+      <div class="grid grid-cols-4 gap-4">
         <div>
           <img class="domestic-trophy" src="/assets/img/premier_league.svg" alt="Premier League trophy">
           <div class="h-10 text-center">Premier League</div>
         </div>
         <div>
           <img class="domestic-trophy" src="/assets/img/fa_cup.svg" alt="FA Cup trophy">
-          <div class="h-10 leading-10 text-center">FA Cup</div>
+          <div class="h-10 text-center">FA Cup</div>
         </div>
         <div>
           <img class="domestic-trophy" src="/assets/img/league_cup.svg" alt="League Cup trophy">
-          <div class="h-10 leading-10 text-center">League Cup</div>
+          <div class="h-10 text-center">League Cup</div>
         </div>
         <div>
           <img class="domestic-trophy" src="/assets/img/english_supercup.svg" alt="English Supercup trophy">
@@ -62,9 +71,9 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="px-8 pb-8">
       <h3 class="text-center">Germany</h3>
-      <div class="grid grid-cols-3 gap-2">
+      <div class="grid grid-cols-3 gap-4">
         <div>
           <img class="domestic-trophy" src="/assets/img/bundesliga.svg" alt="Bundesliga trophy">
           <div class="h-10 text-center">Bundesliga (League)</div>
@@ -84,10 +93,12 @@
 
 <div id="domestic">
   <h2>League Statistics</h2>
-  <p>Down below you may explore the league results of all four leagues. Earliest data is available from the english
+  <p class="text-justify">Down below you may explore the league results of all four leagues. Earliest data is available
+    from the english
     league which goes back until 1888. Spain's and Italy's datasets are available back until 1928 and 1929 respectively.
     Germany is only available until 1963.</p>
-  <p>In case you are wondering about "lost" seasons between 1914 and 1919 as well as 1935 and 1945, those seasons were
+  <p class="text-justify">In case you are wondering about "lost" seasons between 1914 and 1919 as well as 1935 and 1945,
+    those seasons were
     partly abandoned because of WWI and II</p>
   <div class="league-form">
     <mat-form-field class="pr-4" appearance="outline">
