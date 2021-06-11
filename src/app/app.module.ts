@@ -21,6 +21,9 @@ import { CountryStatsComponent } from './components/international/country-stats/
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { WorkloadComponent } from './components/domestic/workload/workload.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { MarketValuesComponent } from './components/market-values/market-values.component';
+import { ConclusionComponent } from './components/conclusion/conclusion.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { WorkloadComponent } from './components/domestic/workload/workload.compo
     LeagueWinnersComponent,
     StatusBarComponent,
     CountryStatsComponent,
-    WorkloadComponent
+    WorkloadComponent,
+    MarketValuesComponent,
+    ConclusionComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,8 @@ import { WorkloadComponent } from './components/domestic/workload/workload.compo
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
