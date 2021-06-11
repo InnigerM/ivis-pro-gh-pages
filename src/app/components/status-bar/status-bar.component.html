@@ -28,8 +28,8 @@
   </mat-step>
   <mat-step [stepControl]="emptyFormGroup" label="Conclusion">
     <form class="container mx-auto" [formGroup]="emptyFormGroup">
-      <p>Show final results</p>
       <div class="container mx-auto">
+        <app-conclusion></app-conclusion>
         <button mat-stroked-button color="accent" matStepperPrevious>Back</button>
         <button mat-stroked-button color="primary" (click)="stepper.reset()">Reset</button>
       </div>
