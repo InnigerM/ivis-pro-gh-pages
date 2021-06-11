@@ -20,8 +20,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { CountryStatsComponent } from './components/international/country-stats/country-stats.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { WorkloadComponent } from './components/domestic/workload/workload.component';
-import { NgApexchartsModule } from 'ng-apexcharts';
 import { MarketValuesComponent } from './components/market-values/market-values.component';
 import { ConclusionComponent } from './components/conclusion/conclusion.component';
 
@@ -34,7 +32,6 @@ import { ConclusionComponent } from './components/conclusion/conclusion.componen
     LeagueWinnersComponent,
     StatusBarComponent,
     CountryStatsComponent,
-    WorkloadComponent,
     MarketValuesComponent,
     ConclusionComponent
   ],
@@ -51,7 +48,6 @@ import { ConclusionComponent } from './components/conclusion/conclusion.componen
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule,
-    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
